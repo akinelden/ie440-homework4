@@ -176,19 +176,24 @@ def NewtonsMethod(x_0,epsilon,f,grad_f,Hessian_f):
 
 
 # %%
-x_f1_s1,f1_s1, outputf1_1 = NewtonsMethod([0,1], 0.001,f1,grad_f1,hess_f1)
-outputf1_1.table
+x_f1_s1,f1_s1, outputf1_1 = NewtonsMethod([-5,1], 0.01,f1,grad_f1,hess_f1)
+x_f1_s1,f1_s1
+print( outputf1_1.table.to_latex(index=False))
 
 
 # %%
 x_f1_s2,f1_s2, outputf1_2 = NewtonsMethod([-25,75], 0.001,f1,grad_f1,hess_f1)
-outputf1_2.table
+x_f1_s2,f1_s2
+print( outputf1_2.table.to_latex(index=False))
 
 
 # %%
-xs, fs, output = NewtonsMethod([0,7], 1,f2,grad_f2,hess_f2)
-output.table
+x_f2_s1,f2_s1, outputf2_1 = NewtonsMethod([-2,4], 0.01,f1,grad_f1,hess_f1)
+print( outputf2_1.table.to_latex(index=False))
+# %%
 
+x_f2_s2,f2_s2, outputf2_2 = NewtonsMethod([-10,1], 0.001,f1,grad_f1,hess_f1)
+print( outputf2_2.table.to_latex(index=False))
 # %% [markdown]
 # ## DFP
 
